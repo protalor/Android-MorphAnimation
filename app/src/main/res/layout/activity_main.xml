@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <Button
+        android:id="@+id/width_wrap_to_match"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:text="width wrap to match"
+        android:lines="1"/>
+
+
+    <Button
+        android:id="@+id/height_visible_to_gone"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="HEIGHT visible to gone"
+        android:lines="1"/>
+
+    <Button
+        android:id="@+id/height_x2"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:text="HEIGHT morph"
+        android:lines="1"/>
+
+    <Button
+        android:id="@+id/width_height_center"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:text="WIDTH HEIGHT center"
+        android:lines="1"/>
+
+    <Button
+        android:id="@+id/width_height_left"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="WIDTH HEIGHT left"
+        android:lines="1"/>
+
+    <Button
+        android:id="@+id/width_height_right"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="right"
+        android:text="WIDTH HEIGHT right"
+        android:lines="1"/>
+
+
+
+</LinearLayout>
