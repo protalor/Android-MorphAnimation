@@ -2,20 +2,107 @@
 
 Easy animation of view type change
 
-### Sample
+## Sample
 
 ![alt text](https://github.com/protalor/MorphAnimation/blob/master/static/MorphAnimation_400.gif?raw=true)
 
-### Use
+## Use
 
 When the view changes, call the static method
 
 ```
+    findViewById(R.id.width_wrap_to_match).setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+
+            if (!v.isSelected()) {
+                v.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
+            } else {
+                v.getLayoutParams().width = ViewGroup.LayoutParams.WRAP_CONTENT;
+            }
+            v.setSelected(!v.isSelected());
+            v.requestLayout();
+
+            MorphAnimation.morph(v, MorphAnimation.ANIMATION_MODE_WIDTH);
+        }
+    });
+
+
     findViewById(R.id.height_visible_to_gone).setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(final View v) {
             v.setVisibility(View.GONE);
+            v.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    v.setVisibility(View.VISIBLE);
+                    MorphAnimation.morph(v, MorphAnimation.ANIMATION_MODE_HEIGHT);
+                }
+            }, 1000);
             MorphAnimation.morph(v, MorphAnimation.ANIMATION_MODE_HEIGHT);
+        }
+    });
+
+
+    findViewById(R.id.height_x2).setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+
+            if (!v.isSelected()) {
+                v.getLayoutParams().height = (int) convertDpToPixel(140, MainActivity.this);
+            } else {
+                v.getLayoutParams().height = (int) convertDpToPixel(70, MainActivity.this);
+            }
+            v.setSelected(!v.isSelected());
+            v.requestLayout();
+
+            MorphAnimation.morph(v);
+        }
+    });
+
+
+    findViewById(R.id.width_height_center).setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(final View v) {
+            v.setVisibility(View.GONE);
+            v.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    v.setVisibility(View.VISIBLE);
+                    MorphAnimation.morph(v, MorphAnimation.ANIMATION_MODE);
+                }
+            }, 1000);
+            MorphAnimation.morph(v, MorphAnimation.ANIMATION_MODE);
+        }
+    });
+
+    findViewById(R.id.width_height_left).setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(final View v) {
+            v.setVisibility(View.GONE);
+            v.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    v.setVisibility(View.VISIBLE);
+                    MorphAnimation.morph(v, MorphAnimation.ANIMATION_MODE);
+                }
+            }, 1000);
+            MorphAnimation.morph(v, MorphAnimation.ANIMATION_MODE);
+        }
+    });
+
+    findViewById(R.id.width_height_right).setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(final View v) {
+            v.setVisibility(View.GONE);
+            v.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    v.setVisibility(View.VISIBLE);
+                    MorphAnimation.morph(v, MorphAnimation.ANIMATION_MODE);
+                }
+            }, 1000);
+            MorphAnimation.morph(v, MorphAnimation.ANIMATION_MODE);
         }
     });
 ```
