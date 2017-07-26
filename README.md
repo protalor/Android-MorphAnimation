@@ -1,6 +1,6 @@
 # MorphAnimation
 
-Easy animation of view type changeEasy animation of view type change
+Easy animation of view type change
 
 ### Use
 
