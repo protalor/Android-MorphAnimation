@@ -2,6 +2,10 @@
 
 Easy animation of view type change
 
+### Sample
+
+![alt text](https://github.com/protalor/MorphAnimation/blob/master/static/MorphAnimation.gif?raw=true)
+
 ### Use
 
 When the view changes, call the static method
