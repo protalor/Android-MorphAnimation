@@ -4,7 +4,7 @@ Easy animation of view type change
 
 ### Sample
 
-<p><img src="https://github.com/protalor/MorphAnimation/blob/master/static/MorphAnimation.gif?raw=true" alt="android-crop screenshot" style="max-width:100%;"></p>
+![alt text](https://github.com/protalor/MorphAnimation/blob/master/static/MorphAnimation_400.gif?raw=true)
 
 ### Use
 
